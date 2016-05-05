@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Back_to_Beethoven" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,97 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P27-us-IDr">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="6OO-qB-nZ9"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="pause" id="ZsO-9R-wav">
+                                        <connections>
+                                            <action selector="pause:" destination="BYZ-38-t0r" id="lrB-1d-PyV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="wKc-aj-CQG"/>
+                                    <barButtonItem style="plain" id="t1K-xh-3gg">
+                                        <slider key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="bVp-39-oUU">
+                                            <rect key="frame" x="175" y="7" width="250" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="adjustVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="RbJ-37-Hws"/>
+                                            </connections>
+                                        </slider>
+                                        <connections>
+                                            <action selector="adjustVolume:" destination="BYZ-38-t0r" id="xha-gV-SwP"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="lsO-SD-P0W"/>
+                                    <barButtonItem title="Stop" id="7ES-1u-Ojw">
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" id="wkq-UX-v3t"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QIf-gi-WU8">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="6Ku-3e-xJm"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Feel the Beet" id="bO1-rz-Y6J">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="play" id="QOY-ik-q3I">
+                                            <connections>
+                                                <action selector="play:" destination="BYZ-38-t0r" id="9s5-am-01h"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beethoven.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="WAq-vF-1BY">
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fdq-XP-DY6">
+                                <rect key="frame" x="18" y="493" width="564" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="o55-4p-Jr4"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="adjustPlayback:" destination="BYZ-38-t0r" eventType="valueChanged" id="nO9-Vs-4ZO"/>
+                                </connections>
+                            </slider>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WAq-vF-1BY" firstAttribute="top" secondItem="QIf-gi-WU8" secondAttribute="bottom" id="0PE-P2-TJN"/>
+                            <constraint firstItem="P27-us-IDr" firstAttribute="top" secondItem="Fdq-XP-DY6" secondAttribute="bottom" constant="33" id="1R9-cO-F55"/>
+                            <constraint firstItem="QIf-gi-WU8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="2hA-SE-SCD"/>
+                            <constraint firstItem="WAq-vF-1BY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="3T2-MA-2pF"/>
+                            <constraint firstItem="Fdq-XP-DY6" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="6Wc-Mt-pYp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="P27-us-IDr" secondAttribute="trailing" constant="-20" id="9RF-eN-cke"/>
+                            <constraint firstItem="WAq-vF-1BY" firstAttribute="top" secondItem="QIf-gi-WU8" secondAttribute="bottom" id="BE3-71-HDv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="P27-us-IDr" secondAttribute="bottom" id="Pzq-0j-rdp"/>
+                            <constraint firstItem="P27-us-IDr" firstAttribute="top" secondItem="WAq-vF-1BY" secondAttribute="bottom" id="Sbg-1p-9YP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WAq-vF-1BY" secondAttribute="trailing" constant="-20" id="TeD-Ma-aPt"/>
+                            <constraint firstItem="QIf-gi-WU8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="XRg-Bp-AvO"/>
+                            <constraint firstItem="Fdq-XP-DY6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Y3D-73-S5i"/>
+                            <constraint firstItem="P27-us-IDr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="hr3-Oo-tb6"/>
+                            <constraint firstItem="P27-us-IDr" firstAttribute="top" secondItem="WAq-vF-1BY" secondAttribute="bottom" id="jMb-LA-OyZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QIf-gi-WU8" secondAttribute="trailing" constant="-20" id="kYH-ot-Jet"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playbackSlider" destination="Fdq-XP-DY6" id="XXp-zy-D3k"/>
+                        <outlet property="volumeSlider" destination="bVp-39-oUU" id="cTF-ci-zz3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="340" y="445"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Beethoven.jpg" width="1200" height="1443"/>
+    </resources>
 </document>

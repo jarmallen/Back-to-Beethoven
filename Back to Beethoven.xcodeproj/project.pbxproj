@@ -12,6 +12,8 @@
 		FAB0CE6E1CA9C550006768E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB0CE6C1CA9C550006768E4 /* Main.storyboard */; };
 		FAB0CE701CA9C551006768E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB0CE6F1CA9C551006768E4 /* Assets.xcassets */; };
 		FAB0CE731CA9C551006768E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB0CE711CA9C551006768E4 /* LaunchScreen.storyboard */; };
+		FAB0CE7B1CA9C5B7006768E4 /* beethoven-67-1-pfaul.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FAB0CE7A1CA9C5B7006768E4 /* beethoven-67-1-pfaul.mp3 */; };
+		FAB0CE7F1CA9C6EA006768E4 /* Beethoven.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAB0CE7E1CA9C6EA006768E4 /* Beethoven.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		FAB0CE6F1CA9C551006768E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAB0CE721CA9C551006768E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAB0CE741CA9C551006768E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAB0CE7A1CA9C5B7006768E4 /* beethoven-67-1-pfaul.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "beethoven-67-1-pfaul.mp3"; sourceTree = "<group>"; };
+		FAB0CE7E1CA9C6EA006768E4 /* Beethoven.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Beethoven.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				FAB0CE681CA9C550006768E4 /* AppDelegate.swift */,
 				FAB0CE6A1CA9C550006768E4 /* ViewController.swift */,
 				FAB0CE6C1CA9C550006768E4 /* Main.storyboard */,
+				FAB0CE7A1CA9C5B7006768E4 /* beethoven-67-1-pfaul.mp3 */,
+				FAB0CE7E1CA9C6EA006768E4 /* Beethoven.jpg */,
 				FAB0CE6F1CA9C551006768E4 /* Assets.xcassets */,
 				FAB0CE711CA9C551006768E4 /* LaunchScreen.storyboard */,
 				FAB0CE741CA9C551006768E4 /* Info.plist */,
@@ -123,9 +129,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB0CE7F1CA9C6EA006768E4 /* Beethoven.jpg in Resources */,
 				FAB0CE731CA9C551006768E4 /* LaunchScreen.storyboard in Resources */,
 				FAB0CE701CA9C551006768E4 /* Assets.xcassets in Resources */,
 				FAB0CE6E1CA9C550006768E4 /* Main.storyboard in Resources */,
+				FAB0CE7B1CA9C5B7006768E4 /* beethoven-67-1-pfaul.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
